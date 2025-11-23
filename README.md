@@ -1,4 +1,4 @@
-# Free VPN Download - 11月15日19.4M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐  更新时间 2025-11-15 10:41:56
+# Free VPN Download - 11月23日18.8M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐  更新时间 2025-11-23 09:48:21
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freevpndownload.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://freevpndownload.github.io/uploads/2025/11/0-20251115.yaml
-- https://freevpndownload.github.io/uploads/2025/11/1-20251115.yaml
-- https://freevpndownload.github.io/uploads/2025/11/2-20251115.yaml
-- https://freevpndownload.github.io/uploads/2025/11/3-20251115.yaml
-- https://freevpndownload.github.io/uploads/2025/11/4-20251115.yaml
+- https://freevpndownload.github.io/uploads/2025/11/0-20251123.yaml
+- https://freevpndownload.github.io/uploads/2025/11/1-20251123.yaml
+- https://freevpndownload.github.io/uploads/2025/11/2-20251123.yaml
+- https://freevpndownload.github.io/uploads/2025/11/3-20251123.yaml
+- https://freevpndownload.github.io/uploads/2025/11/4-20251123.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://freevpndownload.github.io/uploads/2025/11/0-20251115.txt
-- https://freevpndownload.github.io/uploads/2025/11/1-20251115.txt
-- https://freevpndownload.github.io/uploads/2025/11/2-20251115.txt
-- https://freevpndownload.github.io/uploads/2025/11/3-20251115.txt
-- https://freevpndownload.github.io/uploads/2025/11/4-20251115.txt
+- https://freevpndownload.github.io/uploads/2025/11/0-20251123.txt
+- https://freevpndownload.github.io/uploads/2025/11/1-20251123.txt
+- https://freevpndownload.github.io/uploads/2025/11/2-20251123.txt
+- https://freevpndownload.github.io/uploads/2025/11/3-20251123.txt
+- https://freevpndownload.github.io/uploads/2025/11/4-20251123.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://freevpndownload.github.io/uploads/2025/11/20251115.json
+- https://freevpndownload.github.io/uploads/2025/11/20251123.json
 
 ## 更多Clash节点订阅 ：
 
