@@ -376,14 +376,9 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的规则优先级如何设置？</h5></div>
+    <div class="panel-heading"><h5>Potatso Lite 手动节点选择有什么好处？</h5></div>
     <div class="panel-body">
-        在 PassWall2 中，规则的匹配顺序按配置文件自上而下执行。建议将精确规则放在前面，通用规则放后面，以确保高优先级的流量优先被正确分流到指定出口。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 多路复用对短连接性能有何提升？</h5></div>
-    <div class="panel-body">
-        多路复用允许多个短连接共享同一通道，减少握手延迟和资源消耗。适合高频短连接场景，如游戏和即时通讯，可提高吞吐量和连接稳定性，优化整体网络体验。<hr />    </div>
+        手动选择节点可以让用户根据网络延迟和需求选择最优节点。适合节点不稳定或特定访问需求，灵活调整流量走向，提高访问速度和网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 的节点策略组如何提升使用体验？</h5></div>
@@ -391,24 +386,24 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
         策略组可将节点按延迟、用途或地理位置分类，通过规则自动选择最优节点。用户无需手动切换节点即可获得最佳速度和稳定性，提高浏览和观看流媒体的体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 Reality 功能是什么？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 的规则优先级如何设置？</h5></div>
     <div class="panel-body">
-        Reality 是 V2Ray 新增的伪装技术，可替代传统 TLS。它无需真实证书，通过公钥验证机制实现端到端加密。相比 Trojan 的 HTTPS 伪装方式，Reality 更轻量、安全且配置更简洁。<hr />    </div>
+        在 PassWall2 中，规则的匹配顺序按配置文件自上而下执行。建议将精确规则放在前面，通用规则放后面，以确保高优先级的流量优先被正确分流到指定出口。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 使用哪种加密算法？</h5></div>
+    <div class="panel-body">
+        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 多路复用对短连接性能有何提升？</h5></div>
+    <div class="panel-body">
+        多路复用允许多个短连接共享同一通道，减少握手延迟和资源消耗。适合高频短连接场景，如游戏和即时通讯，可提高吞吐量和连接稳定性，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 在路由器上使用 TUN 模式会有什么影响？</h5></div>
     <div class="panel-body">
         启用 TUN 模式会拦截并转发路由器上全部或选定流量，这会增加路由器 CPU 与内存负担，可能影响路由器其他服务表现。建议在性能足够的设备上启用，或仅对特定设备/端口进行分流。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 可以用脚本自动切换节点吗？</h5></div>
-    <div class="panel-body">
-        可以。Quantumult X 支持通过脚本逻辑判断网络延迟或连接失败情况，并自动切换节点。用户可以编写自定义 JS 规则，从而实现智能代理与按需分流，适合高级用户使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 手动节点选择有什么好处？</h5></div>
-    <div class="panel-body">
-        手动选择节点可以让用户根据网络延迟和需求选择最优节点。适合节点不稳定或特定访问需求，灵活调整流量走向，提高访问速度和网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
@@ -421,9 +416,14 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
         原版 SSR 并不完全支持 UDP 转发，但部分魔改版本（如 SSRR）支持该功能。可在配置中开启 udp-over-tcp 模式或使用 Socks5 UDP relay 方案实现游戏等实时通信的代理需求。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 使用哪种加密算法？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 的 Reality 功能是什么？</h5></div>
     <div class="panel-body">
-        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。    </div>
+        Reality 是 V2Ray 新增的伪装技术，可替代传统 TLS。它无需真实证书，通过公钥验证机制实现端到端加密。相比 Trojan 的 HTTPS 伪装方式，Reality 更轻量、安全且配置更简洁。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Quantumult X 可以用脚本自动切换节点吗？</h5></div>
+    <div class="panel-body">
+        可以。Quantumult X 支持通过脚本逻辑判断网络延迟或连接失败情况，并自动切换节点。用户可以编写自定义 JS 规则，从而实现智能代理与按需分流，适合高级用户使用。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -452,16 +452,16 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-176895.htm" title="突破网络限制：v2rayng免费节点获取与使用全攻略">突破网络限制：v2rayng免费节点获取与使用全攻略</a></li>
-                        <li class="py-2"><a href="/news/article-174164.htm" title="掌握V2Ray订阅链接配置：解锁网络自由的全方位指南">掌握V2Ray订阅链接配置：解锁网络自由的全方位指南</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-15-clash-node-daily-updates.htm" title="Free VPN Download - 12月15日21.8M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月15日21.8M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-179248.htm" title="不花一分钱，也能科学上网：V2Ray白嫖订阅全攻略">不花一分钱，也能科学上网：V2Ray白嫖订阅全攻略</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-24-clash-verge-rev-windows.htm" title="Free VPN Download - 12月24日20.4M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月24日20.4M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-17-clash-node-daily-updates.htm" title="Free VPN Download - 12月17日21.2M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月17日21.2M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-18-clash-node-github.htm" title="Free VPN Download - 12月18日22.2M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月18日22.2M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-182024.htm" title="斐讯K2路由器安装Clash全攻略：从理论到实践的完整指南">斐讯K2路由器安装Clash全攻略：从理论到实践的完整指南</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-9-clash-node-github.htm" title="Free VPN Download - 12月9日19.8M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月9日19.8M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点节点推荐，V2ray梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-3-clash-v2ray-ss-ssr.htm" title="Free VPN Download - 1月3日18.2M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 1月3日18.2M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-7-clash-v2ray-ss-ssr.htm" title="Free VPN Download - 12月7日22.7M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月7日22.7M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-2-clash-meta-github.htm" title="Free VPN Download - 1月2日19.4M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 1月2日19.4M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-24-clash-verge-rev-windows.htm" title="Free VPN Download - 12月24日20.4M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月24日20.4M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-7-clash-node.htm" title="Free VPN Download - 1月7日19M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 1月7日19M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-14-clash-node.htm" title="Free VPN Download - 12月14日20.2M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月14日20.2M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-11-clash-stash-node.htm" title="Free VPN Download - 12月11日22.7M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月11日22.7M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-25-node-share.htm" title="Free VPN Download - 12月25日21.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月25日21.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-10-clash-v2ray-ss-ssr.htm" title="Free VPN Download - 12月10日18.9M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月10日18.9M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-18-clash-node-github.htm" title="Free VPN Download - 12月18日22.2M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 12月18日22.2M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -473,13 +473,10 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                     </ul>
     </div>
