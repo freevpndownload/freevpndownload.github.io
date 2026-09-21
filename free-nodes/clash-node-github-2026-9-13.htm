@@ -213,19 +213,14 @@ Clash是一个开源的网络加速工具，任何用户都可以自由使用和
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 支持自动测速吗？</h5></div>
-    <div class="panel-body">
-        支持。Shadowrocket 可以批量测速节点延迟并标记最佳连接。用户还可设置自动切换到最低延迟节点，实现稳定高速的上网体验，尤其在网络波动较大的环境中效果明显。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 如何通过策略组优化海外网站访问？</h5></div>
     <div class="panel-body">
         策略组可根据延迟和地理位置自动选择最佳节点访问海外网站。结合路由规则，可实现国内流量直连，国外流量通过代理，提高访问速度，降低延迟和连接不稳定风险。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
+    <div class="panel-heading"><h5>SSR 如何防止流量被 DPI 检测？</h5></div>
     <div class="panel-body">
-        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和多出口节点，可提高访问速度和连接稳定性，保证用户体验流畅。<hr />    </div>
+        通过协议插件和混淆方式可以模拟正常 HTTPS 或 HTTP 流量，隐藏真实流量特征。合理配置混淆插件和加密方式，可以有效绕过 DPI 检测，保证连接稳定性和长期可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2RayA 在 Linux 系统中如何开机自启？</h5></div>
@@ -233,24 +228,14 @@ Clash是一个开源的网络加速工具，任何用户都可以自由使用和
         可通过 systemd 创建启动项或在启动脚本中添加 V2RayA 启动命令。编辑 /etc/systemd/system/v2raya.service 文件并设置 `Restart=always`，执行 `systemctl enable v2raya` 使其随系统自动启动。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 如何在 Windows 上加速游戏？</h5></div>
-    <div class="panel-body">
-        Netch 使用 TUN/TAP 模式将特定进程流量通过代理转发，常用于游戏加速。用户只需将游戏进程添加到列表，选择合适的代理节点，即可降低延迟并绕过地理限制。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 如何实现 UDP 游戏加速？</h5></div>
-    <div class="panel-body">
-        Netch 支持 UDP 转发，可专门为游戏流量建立高速通道。结合策略组和节点延迟检测，可有效减少丢包和延迟，提高游戏体验的流畅性和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 中的 alterId 是什么，现在还有必要配置吗？</h5></div>
-    <div class="panel-body">
-        alterId 曾用于 VMess 的用户混淆机制以防止重放攻击，但在 V2Ray 新版本与 VLess 出现后，alterId 已不再推荐使用。现代配置多使用 UUID 或直接迁移至 VLess/XTLS 以获得更好性能与安全性。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟？</h5></div>
     <div class="panel-body">
         将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点延迟和健康状态自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟和稳定连接。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
+    <div class="panel-body">
+        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和多出口节点，可提高访问速度和连接稳定性，保证用户体验流畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的协议插件与加密方式如何搭配使用？</h5></div>
@@ -258,9 +243,24 @@ Clash是一个开源的网络加速工具，任何用户都可以自由使用和
         协议插件可增强抗封锁能力，加密方式确保数据安全。合理搭配可模拟正常流量特征，同时保障传输安全，有助于在封锁严格环境下维持节点可用性和稳定连接。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 如何防止流量被 DPI 检测？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 支持自动测速吗？</h5></div>
     <div class="panel-body">
-        通过协议插件和混淆方式可以模拟正常 HTTPS 或 HTTP 流量，隐藏真实流量特征。合理配置混淆插件和加密方式，可以有效绕过 DPI 检测，保证连接稳定性和长期可用性。    </div>
+        支持。Shadowrocket 可以批量测速节点延迟并标记最佳连接。用户还可设置自动切换到最低延迟节点，实现稳定高速的上网体验，尤其在网络波动较大的环境中效果明显。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 中的 alterId 是什么，现在还有必要配置吗？</h5></div>
+    <div class="panel-body">
+        alterId 曾用于 VMess 的用户混淆机制以防止重放攻击，但在 V2Ray 新版本与 VLess 出现后，alterId 已不再推荐使用。现代配置多使用 UUID 或直接迁移至 VLess/XTLS 以获得更好性能与安全性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 如何实现 UDP 游戏加速？</h5></div>
+    <div class="panel-body">
+        Netch 支持 UDP 转发，可专门为游戏流量建立高速通道。结合策略组和节点延迟检测，可有效减少丢包和延迟，提高游戏体验的流畅性和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 如何在 Windows 上加速游戏？</h5></div>
+    <div class="panel-body">
+        Netch 使用 TUN/TAP 模式将特定进程流量通过代理转发，常用于游戏加速。用户只需将游戏进程添加到列表，选择合适的代理节点，即可降低延迟并绕过地理限制。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -308,16 +308,16 @@ Clash是一个开源的网络加速工具，任何用户都可以自由使用和
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-8-28-clash-node.htm" title="Free VPN Download - 8月28日22.1M/S|免费SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 8月28日22.1M/S|免费SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-9-9.htm" title="Free VPN Download - 9月9日22.8M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 9月9日22.8M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-14-clash-node-daily-updates.htm" title="Free VPN Download - 8月14日20.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 8月14日20.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-meta-github-2026-8-15.htm" title="Free VPN Download - 8月15日19.8M/S|免费Trojan节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 8月15日19.8M/S|免费Trojan节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-12-clash-stash-node.htm" title="Free VPN Download - 8月12日22.6M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 8月12日22.6M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-meta-github-2026-8-23.htm" title="Free VPN Download - 8月23日22.5M/S|免费Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 8月23日22.5M/S|免费Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-14-free-node-subscribe.htm" title="Free VPN Download - 9月14日22M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 9月14日22M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/node-share-2026-8-17.htm" title="Free VPN Download - 8月17日21.2M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 8月17日21.2M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-24-clash-verge-rev-github.htm" title="Free VPN Download - 8月24日21.3M/S|免费SSR节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 8月24日21.3M/S|免费SSR节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-28-clash-node.htm" title="Free VPN Download - 8月28日22.1M/S|免费SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 8月28日22.1M/S|免费SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-clash-stash-node.htm" title="Free VPN Download - 9月2日22.3M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 9月2日22.3M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-14-free-node-subscribe.htm" title="Free VPN Download - 9月14日22M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 9月14日22M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-20-clash-node.htm" title="Free VPN Download - 9月20日19.2M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 9月20日19.2M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/node-share-2026-9-11.htm" title="Free VPN Download - 9月11日21.9M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 9月11日21.9M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-9-1.htm" title="Free VPN Download - 9月1日21.5M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 9月1日21.5M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-30-clash-node.htm" title="Free VPN Download - 8月30日20.8M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 8月30日20.8M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-6-clash-stash-node.htm" title="Free VPN Download - 9月6日22.6M/S|免费Clash节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2ray梯子购买推荐">Free VPN Download - 9月6日22.6M/S|免费Clash节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -329,7 +329,7 @@ Clash是一个开源的网络加速工具，任何用户都可以自由使用和
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
